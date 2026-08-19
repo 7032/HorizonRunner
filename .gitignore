@@ -1,0 +1,24 @@
+# ビルド生成物
+/build/
+
+# 環境固有の確認資材と作業メモ (= 公開しない。丸ごと除外する)
+/.claude/
+
+# 確認用のスクリーンショット
+/screenshot/
+
+# Python の一時生成物
+__pycache__/
+*.py[cod]
+
+# 任意形式の配布生成物 (build/ 内などの中間生成物は無視する)
+*.hfe
+*.t77
+*.wav
+*.cmt.txt
+
+# ただし disks/ 配下の配布イメージだけは追跡する
+!/disks/*.d77
+!/disks/*.t77
+!/disks/*.wav
+!/disks/*.cmt.txt

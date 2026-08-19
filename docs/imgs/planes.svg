@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 250" width="740">
+  <rect x="0" y="0" width="740" height="250" fill="#ffffff"/>
+  <!-- 3 枚のプレーン (奥から G, R, B) -->
+  <rect x="70" y="70" width="150" height="90" fill="#e8f5e9" stroke="#2e7d32"/>
+  <rect x="50" y="50" width="150" height="90" fill="#fde8e8" stroke="#c62828"/>
+  <rect x="30" y="30" width="150" height="90" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="40" y="50" font-family="sans-serif" font-size="14" fill="#1565c0">B $0000- (面 0)</text>
+  <text x="115" y="135" font-family="sans-serif" font-size="14" fill="#c62828">R $4000- (面 1)</text>
+  <text x="135" y="155" font-family="sans-serif" font-size="14" fill="#2e7d32">G $8000- (床)</text>
+  <!-- 同じ位置の画素 -->
+  <circle cx="120" cy="80" r="4" fill="#1565c0"/>
+  <circle cx="140" cy="100" r="4" fill="#c62828"/>
+  <circle cx="160" cy="120" r="4" fill="#2e7d32"/>
+  <line x1="120" y1="80" x2="160" y2="120" stroke="#555555" stroke-dasharray="3,3"/>
+  <text x="30" y="205" font-family="sans-serif" font-size="13" fill="#333333">同じ位置のビット 3 つが「色番号」になる</text>
+  <!-- 色番号 → パレット -->
+  <line x1="230" y1="100" x2="300" y2="100" stroke="#333333" marker-end="url(#a1)"/>
+  <rect x="300" y="70" width="150" height="60" fill="#fffde7" stroke="#795548"/>
+  <text x="320" y="96" font-family="sans-serif" font-size="14" fill="#333333">色番号 (3 bit)</text>
+  <text x="322" y="116" font-family="sans-serif" font-size="13" fill="#666666">G R B の順</text>
+  <line x1="450" y1="100" x2="520" y2="100" stroke="#333333" marker-end="url(#a1)"/>
+  <rect x="520" y="55" width="180" height="90" fill="#f5f5f5" stroke="#333333"/>
+  <text x="540" y="80" font-family="sans-serif" font-size="14" fill="#333333">パレット $FD38-</text>
+  <rect x="540" y="92" width="16" height="16" fill="#ffffff" stroke="#333333"/>
+  <text x="562" y="105" font-family="sans-serif" font-size="13" fill="#333333">白 $07</text>
+  <rect x="620" y="92" width="16" height="16" fill="#43a047"/>
+  <text x="642" y="105" font-family="sans-serif" font-size="13" fill="#333333">緑 $04</text>
+  <rect x="540" y="116" width="16" height="16" fill="#000000"/>
+  <text x="562" y="129" font-family="sans-serif" font-size="13" fill="#333333">黒 $00</text>
+  <text x="520" y="170" font-family="sans-serif" font-size="13" fill="#333333">8 個の色番号それぞれに色を割り当てる</text>
+  <defs><marker id="a1" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#333333"/></marker></defs>
+</svg>

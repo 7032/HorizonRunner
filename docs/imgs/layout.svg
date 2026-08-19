@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 260" width="740">
+  <rect x="0" y="0" width="740" height="260" fill="#ffffff"/>
+  <!-- 画面全体 640x200 → 560x175 で描く -->
+  <rect x="60" y="30" width="560" height="175" fill="#111111" stroke="#333333"/>
+  <text x="60" y="22" font-family="sans-serif" font-size="14" fill="#333333">画面全体 640x200</text>
+  <!-- HUD -->
+  <text x="120" y="62" font-family="monospace" font-size="13" fill="#4caf50">SCORE 000000</text>
+  <text x="460" y="62" font-family="monospace" font-size="13" fill="#4caf50">REST 3</text>
+  <!-- 描画枠 384x96 → 336x84。枠は line52/byte16 → x=60+140, y=30+45.5 -->
+  <rect x="200" y="75" width="294" height="84" fill="#000000" stroke="#ffb300" stroke-width="2"/>
+  <text x="500" y="90" font-family="sans-serif" font-size="14" fill="#ffb300">描画枠 384x96</text>
+  <text x="500" y="108" font-family="sans-serif" font-size="12" fill="#996600">毎フレーム描くのはここだけ</text>
+  <!-- 床の縞 -->
+  <rect x="200" y="120" width="294" height="4" fill="#2e7d32"/>
+  <rect x="200" y="130" width="294" height="5" fill="#43a047"/>
+  <rect x="200" y="141" width="294" height="7" fill="#2e7d32"/>
+  <rect x="200" y="151" width="294" height="8" fill="#43a047"/>
+  <!-- 自機 -->
+  <rect x="335" y="105" width="16" height="10" fill="#ffffff"/>
+  <text x="120" y="235" font-family="sans-serif" font-size="13" fill="#333333">枠の外 (得点・残機) には毎フレームの描画が来ない = 一度書けば消えない</text>
+  <line x1="150" y1="220" x2="150" y2="70" stroke="#555555" stroke-dasharray="3,3" marker-end="url(#a2)"/>
+  <defs><marker id="a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#555555"/></marker></defs>
+</svg>

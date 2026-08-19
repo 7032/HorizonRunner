@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 300" width="740">
+  <rect x="0" y="0" width="740" height="300" fill="#ffffff"/>
+  <text x="30" y="30" font-family="sans-serif" font-size="15" fill="#333333">あるフレーム</text>
+  <!-- 左: 面1 が表、面0 が裏 -->
+  <rect x="30" y="45" width="140" height="90" fill="#000000" stroke="#c62828" stroke-width="3"/>
+  <rect x="80" y="80" width="20" height="12" fill="#ffffff"/>
+  <text x="30" y="155" font-family="sans-serif" font-size="14" fill="#c62828">面 1 = 表 (見えている)</text>
+  <rect x="30" y="175" width="140" height="90" fill="#222222" stroke="#1565c0" stroke-width="3" stroke-dasharray="6,3"/>
+  <rect x="100" y="215" width="20" height="12" fill="#bbbbbb"/>
+  <text x="30" y="285" font-family="sans-serif" font-size="14" fill="#1565c0">面 0 = 裏 (サブが描画中)</text>
+  <!-- 中央: 切替 -->
+  <line x1="200" y1="155" x2="330" y2="155" stroke="#333333" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="205" y="130" font-family="sans-serif" font-size="14" fill="#333333">描き上がったら</text>
+  <text x="205" y="148" font-family="sans-serif" font-size="14" fill="#333333">パレット 8 byte を書く</text>
+  <text x="205" y="180" font-family="sans-serif" font-size="13" fill="#666666">VRAM は 1 byte も</text>
+  <text x="205" y="196" font-family="sans-serif" font-size="13" fill="#666666">コピーしない</text>
+  <text x="360" y="30" font-family="sans-serif" font-size="15" fill="#333333">次のフレーム</text>
+  <!-- 右: 面0 が表、面1 が裏 -->
+  <rect x="360" y="45" width="140" height="90" fill="#000000" stroke="#1565c0" stroke-width="3"/>
+  <rect x="110" y="80" width="20" height="12" fill="#ffffff" transform="translate(330,0)"/>
+  <text x="360" y="155" font-family="sans-serif" font-size="14" fill="#1565c0">面 0 = 表 (見えている)</text>
+  <rect x="360" y="175" width="140" height="90" fill="#222222" stroke="#c62828" stroke-width="3" stroke-dasharray="6,3"/>
+  <rect x="420" y="215" width="20" height="12" fill="#bbbbbb"/>
+  <text x="360" y="285" font-family="sans-serif" font-size="14" fill="#c62828">面 1 = 裏 (サブが描画中)</text>
+  <!-- 右側の注 -->
+  <text x="540" y="80" font-family="sans-serif" font-size="14" fill="#333333">裏の面のビットは</text>
+  <text x="540" y="98" font-family="sans-serif" font-size="14" fill="#333333">色に効かないので、</text>
+  <text x="540" y="116" font-family="sans-serif" font-size="14" fill="#333333">描きかけの絵は</text>
+  <text x="540" y="134" font-family="sans-serif" font-size="14" fill="#333333">絶対に見えない</text>
+  <text x="540" y="200" font-family="sans-serif" font-size="13" fill="#666666">床の G 面は切り替えず</text>
+  <text x="540" y="216" font-family="sans-serif" font-size="13" fill="#666666">毎フレーム塗り直す</text>
+  <defs><marker id="a3" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#333333"/></marker></defs>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 240" width="740">
+  <rect x="0" y="0" width="740" height="240" fill="#ffffff"/>
+  <!-- フレーム目盛 -->
+  <line x1="120" y1="30" x2="120" y2="185" stroke="#bbbbbb" stroke-dasharray="4,3"/>
+  <line x1="320" y1="30" x2="320" y2="185" stroke="#bbbbbb" stroke-dasharray="4,3"/>
+  <line x1="520" y1="30" x2="520" y2="185" stroke="#bbbbbb" stroke-dasharray="4,3"/>
+  <text x="200" y="25" font-family="sans-serif" font-size="14" fill="#333333">フレーム N</text>
+  <text x="390" y="25" font-family="sans-serif" font-size="14" fill="#333333">フレーム N+1</text>
+  <!-- main 行 -->
+  <text x="30" y="65" font-family="sans-serif" font-size="14" fill="#333333">main</text>
+  <rect x="120" y="45" width="185" height="30" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="130" y="65" font-family="sans-serif" font-size="13" fill="#1565c0">N の中身を計算して積む</text>
+  <rect x="320" y="45" width="185" height="30" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="330" y="65" font-family="sans-serif" font-size="13" fill="#1565c0">N+1 の中身を計算して積む</text>
+  <!-- sub 行 -->
+  <text x="30" y="130" font-family="sans-serif" font-size="14" fill="#333333">サブ</text>
+  <rect x="320" y="110" width="185" height="30" fill="#fde8e8" stroke="#c62828"/>
+  <text x="330" y="130" font-family="sans-serif" font-size="13" fill="#c62828">N の絵を裏面へ描く</text>
+  <rect x="520" y="110" width="185" height="30" fill="#fde8e8" stroke="#c62828"/>
+  <text x="530" y="130" font-family="sans-serif" font-size="13" fill="#c62828">N+1 の絵を裏面へ描く</text>
+  <!-- 投げる矢印 -->
+  <line x1="305" y1="75" x2="325" y2="108" stroke="#333333" marker-end="url(#a4)"/>
+  <line x1="505" y1="75" x2="525" y2="108" stroke="#333333" marker-end="url(#a4)"/>
+  <!-- 表示行 -->
+  <text x="30" y="175" font-family="sans-serif" font-size="14" fill="#333333">表示</text>
+  <rect x="520" y="160" width="185" height="24" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="530" y="177" font-family="sans-serif" font-size="13" fill="#2e7d32">N の絵が表に出る</text>
+  <line x1="505" y1="140" x2="522" y2="160" stroke="#333333" marker-end="url(#a4)"/>
+  <text x="120" y="215" font-family="sans-serif" font-size="13" fill="#333333">サブが描いている間、main は次のフレームを計算する (並列)。表示は 1 フレーム遅れる。</text>
+  <defs><marker id="a4" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#333333"/></marker></defs>
+</svg>
